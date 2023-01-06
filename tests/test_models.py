@@ -136,7 +136,6 @@ class TestAccount(unittest.TestCase):
         """It should Find an Account by name"""
         account = AccountFactory()
         account.create()
-
         # Fetch it back by name
         same_account = Account.find_by_name(account.name)[0]
         self.assertEqual(same_account.id, account.id)
